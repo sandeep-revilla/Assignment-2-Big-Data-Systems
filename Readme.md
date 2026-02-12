@@ -5,7 +5,7 @@
 
 ## 📂 1. Data Set Sources
 
-The datasets used in this assignment are included in this repository.
+The datasets used in this assignment are included in this [repository](https://github.com/sandeep-revilla/Assignment-2-Big-Data-Systems).
 
 ### 🔹 MongoDB – Banking Transaction Dataset
 - **File:** `banking_transactions.json`
