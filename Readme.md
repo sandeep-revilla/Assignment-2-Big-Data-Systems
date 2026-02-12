@@ -76,7 +76,7 @@ The datasets used in this assignment are included in this repository.
 ## 💻 3. Programming Language Connectivity
 
 ### 🔹 MongoDB Atlas – Python Connection
-```python
+#python
 # MongoDB Atlas - Python example
 from pymongo import MongoClient
 
@@ -92,7 +92,7 @@ print("Total Documents:", collection.count_documents({}))
 for doc in collection.find().limit(5):
     print(doc)
 ### 🔹 Neo4j Aura – Python Connection
-```python
+#python
 # Neo4j Aura - Python example
 from neo4j import GraphDatabase
 
