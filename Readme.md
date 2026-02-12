@@ -76,7 +76,7 @@ The datasets used in this assignment are included in this repository.
 ## 💻 3. Programming Language Connectivity
 
 ### 🔹 MongoDB Atlas – Python Connection
-#python
+```python
 # MongoDB Atlas - Python example
 from pymongo import MongoClient
 
@@ -111,7 +111,7 @@ with driver.session() as session:
     for record in result:
         print(record["Aircraft_MSN"])
 
-driver.close()
+driver.close() ```python
 
 ## 4. MongoDB Analysis Scenarios (Summary)
 
