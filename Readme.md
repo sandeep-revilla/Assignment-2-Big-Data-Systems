@@ -132,3 +132,24 @@ print("Total Documents:", collection.count_documents({}))
 
 for doc in collection.find().limit(5):
     print(doc)
+### 🔹 Neo4j Aura – Python Connection
+
+```python
+from neo4j import GraphDatabase
+
+URI = "neo4j+s://YOUR_INSTANCE_ID.databases.neo4j.io"
+USERNAME = "neo4j"
+PASSWORD = "YOUR_PASSWORD"
+
+driver = GraphDatabase.driver(URI, auth=(USERNAME, PASSWORD))
+
+with driver.session() as session:
+    result = session.run("""
+        MATCH (a:Aircraft)
+        RETURN a.msn AS Aircraft_MSN
+        LIMIT 5
+    """)
+    for record in result:
+        print(record["Aircraft_MSN"])
+
+driver.close()
