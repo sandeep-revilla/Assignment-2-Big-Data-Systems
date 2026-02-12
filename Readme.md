@@ -113,7 +113,6 @@ with driver.session() as session:
 
 driver.close()
 
-
 ## 4. MongoDB Analysis Scenarios (Summary)
 
 ### 1. Total Completed Credit Amount per City
