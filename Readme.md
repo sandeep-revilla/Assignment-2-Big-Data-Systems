@@ -73,46 +73,6 @@ The datasets used in this assignment are included in this repository.
 
 ---
 
-## 💻 3. Programming Language Connectivity
-
-### 🔹 MongoDB Atlas – Python Connection
-```python
-# MongoDB Atlas - Python example
-from pymongo import MongoClient
-
-connection_string = "mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/banking_system?retryWrites=true&w=majority"
-
-client = MongoClient(connection_string)
-db = client["banking_system"]
-collection = db["transactions"]
-
-print("Connected to MongoDB Atlas")
-print("Total Documents:", collection.count_documents({}))
-
-for doc in collection.find().limit(5):
-    print(doc)
-### 🔹 Neo4j Aura – Python Connection
-#python
-# Neo4j Aura - Python example
-from neo4j import GraphDatabase
-
-URI = "neo4j+s://YOUR_INSTANCE_ID.databases.neo4j.io"
-USERNAME = "neo4j"
-PASSWORD = "YOUR_PASSWORD"
-
-driver = GraphDatabase.driver(URI, auth=(USERNAME, PASSWORD))
-
-with driver.session() as session:
-    result = session.run("""
-        MATCH (a:Aircraft)
-        RETURN a.msn AS Aircraft_MSN
-        LIMIT 5
-    """)
-    for record in result:
-        print(record["Aircraft_MSN"])
-
-driver.close() ```python
-
 ## 4. MongoDB Analysis Scenarios (Summary)
 
 ### 1. Total Completed Credit Amount per City
@@ -223,3 +183,43 @@ driver.close() ```python
 
 ### 15. Parts Without Associated Substances
 - **Description:** Identify parts that have no associated substances in the graph.
+
+## 💻 3. Programming Language Connectivity
+
+### 🔹 MongoDB Atlas – Python Connection
+```python
+# MongoDB Atlas - Python example
+from pymongo import MongoClient
+
+connection_string = "mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/banking_system?retryWrites=true&w=majority"
+
+client = MongoClient(connection_string)
+db = client["banking_system"]
+collection = db["transactions"]
+
+print("Connected to MongoDB Atlas")
+print("Total Documents:", collection.count_documents({}))
+
+for doc in collection.find().limit(5):
+    print(doc)
+### 🔹 Neo4j Aura – Python Connection
+#python
+# Neo4j Aura - Python example
+from neo4j import GraphDatabase
+
+URI = "neo4j+s://YOUR_INSTANCE_ID.databases.neo4j.io"
+USERNAME = "neo4j"
+PASSWORD = "YOUR_PASSWORD"
+
+driver = GraphDatabase.driver(URI, auth=(USERNAME, PASSWORD))
+
+with driver.session() as session:
+    result = session.run("""
+        MATCH (a:Aircraft)
+        RETURN a.msn AS Aircraft_MSN
+        LIMIT 5
+    """)
+    for record in result:
+        print(record["Aircraft_MSN"])
+
+driver.close() ```python
