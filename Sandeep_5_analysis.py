@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-connection_string = "mongodb+srv://2024c104019_db_user:1pvMYZxHQYWifCS5@cluster0.vn3em5x.mongodb.net/?appName=Cluster0"
+connection_string = ""
 
 client = MongoClient(connection_string)
 db = client["banking_system"]
